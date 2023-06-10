@@ -19,7 +19,11 @@ public:
     Login(QWidget *parent = nullptr);
     ~Login();
 
+private slots:
+    void on_LoginButton_clicked();
+
 private:
     Ui::Login *ui;
+    QSqlDatabase mydb;
 };
 #endif // LOGIN_H
