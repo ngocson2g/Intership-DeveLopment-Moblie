@@ -54,6 +54,7 @@ public:
 
         textEdit_recied_from_server = new QTextEdit(centralwidget);
         textEdit_recied_from_server->setObjectName("textEdit_recied_from_server");
+        textEdit_recied_from_server->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(textEdit_recied_from_server, 1, 0, 1, 2);
 

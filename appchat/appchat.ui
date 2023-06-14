@@ -6,70 +6,101 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>285</width>
-    <height>370</height>
+    <width>926</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>AppChat</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>44</y>
-      <width>258</width>
-      <height>276</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>APP CHAT</string>
-       </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QPushButton" name="pushButton_open_app">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>150</y>
+          <width>80</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>App chat</string>
+        </property>
+       </widget>
       </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="label_index_code">
-       <property name="text">
-        <string>Code</string>
-       </property>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>APP CHAT</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_index_code">
+            <property name="text">
+             <string>Code</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBox_ListAddress"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_Connect">
+            <property name="text">
+             <string>connect</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="3">
+           <widget class="QTextEdit" name="textEdit_recied">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_Send">
+            <property name="text">
+             <string>Send</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QLineEdit" name="lineEdit_Message_Send"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_back">
+            <property name="text">
+             <string>back</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="comboBox_ListAddress"/>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="pushButton_Connect">
-       <property name="text">
-        <string>connect</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0" colspan="3">
-      <widget class="QTextEdit" name="textEdit_recied"/>
-     </item>
-     <item row="3" column="2">
-      <widget class="QPushButton" name="pushButton_Send">
-       <property name="text">
-        <string>Send</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_Message_Send"/>
-     </item>
-    </layout>
-   </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>285</width>
+     <width>926</width>
      <height>21</height>
     </rect>
    </property>

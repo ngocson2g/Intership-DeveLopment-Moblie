@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,15 +10,15 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    appchat.cpp \
-    tcpmanager.cpp
+    mainwindow.cpp \
+    testd5.cpp
 
 HEADERS += \
-    appchat.h \
-    tcpmanager.h
+    mainwindow.h \
+    testd5.h
 
 FORMS += \
-    appchat.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

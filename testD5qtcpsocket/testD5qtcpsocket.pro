@@ -10,15 +10,15 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    appchat.cpp \
-    tcpmanager.cpp
+    mainwindow.cpp \
+    tcpsockett.cpp
 
 HEADERS += \
-    appchat.h \
-    tcpmanager.h
+    mainwindow.h \
+    tcpsockett.h
 
 FORMS += \
-    appchat.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
