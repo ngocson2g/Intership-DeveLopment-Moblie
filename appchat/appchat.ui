@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>424</width>
-    <height>385</height>
+    <width>285</width>
+    <height>370</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,40 +17,49 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>40</y>
-      <width>260</width>
-      <height>250</height>
+      <x>11</x>
+      <y>44</y>
+      <width>258</width>
+      <height>276</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>MsgName</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="textEdit_recied"/>
-       </item>
-      </layout>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>APP CHAT</string>
+       </property>
+      </widget>
      </item>
-     <item row="1" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLineEdit" name="lineEdit_Message_Send"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_Send">
-         <property name="text">
-          <string>Send</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_index_code">
+       <property name="text">
+        <string>Code</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboBox_ListAddress"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_Connect">
+       <property name="text">
+        <string>connect</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QTextEdit" name="textEdit_recied"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="pushButton_Send">
+       <property name="text">
+        <string>Send</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_Message_Send"/>
      </item>
     </layout>
    </widget>
@@ -60,7 +69,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>424</width>
+     <width>285</width>
      <height>21</height>
     </rect>
    </property>

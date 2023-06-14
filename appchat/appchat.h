@@ -8,7 +8,10 @@
 #include <QMessageBox>
 #include <QList>
 #include <QByteArray>
-#include <QString>>
+#include <QString>
+#include <QHostAddress>
+#include <QtNetwork/QNetworkInterface>
+#include <QDebug>
 
 
 
@@ -25,11 +28,17 @@ public:
     ~AppChat();
 
 private slots:
-    void Read_Data_From_Socket();
+    bool Read_Data_From_Socket();
 
-    void Read_Data_From_Server();
+    bool Read_Data_From_Server();
     void newConnection();
     void on_pushButton_Send_clicked();
+
+    void on_pushButton_check_clicked();
+
+    void on_pushButton_Connect_clicked();
+
+    bool check_connect();
 
 private:
     void Add_New_Client_Connection(QTcpSocket *socket);
@@ -41,5 +50,9 @@ private:
     QList<QTcpSocket*> Client_Connection_List;
 
     QTcpSocket *TCPSocket;
+    QString Iaddress;
+    QString Laddress;
+
+    int Host = 8080;
 };
 #endif // APPCHAT_H
