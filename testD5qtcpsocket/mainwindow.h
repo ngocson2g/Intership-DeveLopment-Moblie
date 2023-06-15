@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-#include <tcpsockett.h>
+#include "tcpsockett.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,7 +24,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_ip_vailable();
+
 private:
     Ui::MainWindow *ui;
+
+    tcpsockett *sockettcp;
 };
 #endif // MAINWINDOW_H

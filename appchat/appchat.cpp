@@ -22,11 +22,11 @@ AppChat::AppChat(QWidget *parent)
     Laddress = Iaddress.left(Iaddress.lastIndexOf(".") + 1);
     Laddress = "127.0.0.";
 
-    tcpManager = new TCPManager(this);
-    connect(this,&AppChat::checkIps,tcpManager,&TCPManager::onCheckIPs);
-    connect(tcpManager,&TCPManager::checkIPsCompleted,this,&AppChat::on_ips_available);
+    //tcpManager = new TCPManager(this);
+    //connect(this,&AppChat::checkIps,tcpManager,&TCPManager::onCheckIPs);
+    //connect(tcpManager,&TCPManager::checkIPsCompleted,this,&AppChat::on_ips_available);
 
-    emit checkIps();
+
 
     TCPSocket = new QTcpSocket();
     QList<QString> ListAddress;
@@ -64,7 +64,7 @@ AppChat::AppChat(QWidget *parent)
             QMessageBox::information(this, "APP", "ERROR");
         }
     }
-    emit checkIps();
+
 }
 
 AppChat::~AppChat()
@@ -166,7 +166,6 @@ void AppChat::on_pushButton_Connect_clicked()
         TCPSocket->connectToHost(QHostAddress(Address), Host);
         connect(TCPSocket, SIGNAL(readyRead()), this, SLOT(Read_Data_From_Server()));
         TCPSocket->open(QIODevice::ReadWrite);
-
         if (!check_connect()) {
                 TCPSocket->disconnectFromHost();
         }

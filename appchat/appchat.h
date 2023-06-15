@@ -13,7 +13,7 @@
 #include <QtNetwork/QNetworkInterface>
 #include <QDebug>
 
-#include "tcpmanager.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class AppChat; }
@@ -26,9 +26,6 @@ class AppChat : public QMainWindow
 public:
     AppChat(QWidget *parent = nullptr);
     ~AppChat();
-
-signals:
-    void checkIps();
 
 private slots:
     bool Read_Data_From_Socket();
@@ -47,7 +44,7 @@ private slots:
 
     void on_pushButton_open_app_clicked();
 
-    void on_ips_available(QList<QString> listIps);
+
 
 private:
     void Add_New_Client_Connection(QTcpSocket *socket);
@@ -63,7 +60,7 @@ private:
     QString Laddress;
 
     int Host = 8080;
-    TCPManager *tcpManager = nullptr;
+
 };
 
 #endif // APPCHAT_H

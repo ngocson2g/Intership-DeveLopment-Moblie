@@ -22,8 +22,17 @@ void tcpsockett::on_acction_connect_clicked()
     if (TCPSocket->waitForConnected(1000)){
         connect(TCPSocket, SIGNAL(readyRead()), this, SLOT(Read_Data_From_Socket()));
         TCPSocket->open(QIODeviceBase::ReadWrite);
-        QMessageBox::information(this, "test socket", "connect complete");
     } else {
-        QMessageBox::information(this, "test socket", "connect complete");
+        ///
     }
+}
+
+void tcpsockett::checkip_complete(QList<QString> list)
+{
+
+}
+
+void tcpsockett::on_checkip()
+{
+
 }

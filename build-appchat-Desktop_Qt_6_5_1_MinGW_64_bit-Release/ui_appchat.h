@@ -92,6 +92,7 @@ public:
 
         textEdit_recied = new QTextEdit(page_2);
         textEdit_recied->setObjectName("textEdit_recied");
+        textEdit_recied->setLayoutDirection(Qt::LeftToRight);
 
         gridLayout->addWidget(textEdit_recied, 2, 0, 1, 3);
 
@@ -128,7 +129,7 @@ public:
 
         retranslateUi(AppChat);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(AppChat);

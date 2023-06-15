@@ -11,7 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-    connect(this, SIGNAL(checkip()), tcpsockett, SLOT(on_acction_connect_clicked()));
+
+    QList<QString> list;
+    sockettcp = new tcpsockett(this);
+    connect(this, &MainWindow::checkip, sockettcp, &tcpsockett::on_checkip);
+    connect(sockettcp, &tcpsockett::checkip_complete, this, &MainWindow::on_ip_vailable);
 
 }
 
@@ -23,6 +27,11 @@ void MainWindow::on_pushButton_clicked()
 
 
 void MainWindow::on_pushButton_2_clicked()
+{
+
+}
+
+void MainWindow::on_ip_vailable()
 {
 
 }

@@ -10,12 +10,10 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    appchat.cpp \
-    tcpmanager.cpp
+    appchat.cpp
 
 HEADERS += \
-    appchat.h \
-    tcpmanager.h
+    appchat.h
 
 FORMS += \
     appchat.ui
