@@ -42,3 +42,9 @@ Appchat::on_write_msg(bool user, QString msg)
     ui->textEdit->append(msg);
 }
 
+
+void Appchat::on_pushButton_back_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex()-1);
+}
+

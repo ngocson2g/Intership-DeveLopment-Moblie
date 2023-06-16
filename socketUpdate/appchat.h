@@ -28,6 +28,8 @@ private slots:
 
     on_write_msg(bool user, QString msg);
 
+    void on_pushButton_back_clicked();
+
 private:
     Ui::Appchat *ui;
 
