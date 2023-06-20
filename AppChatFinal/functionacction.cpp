@@ -121,16 +121,17 @@ void FunctionAcction::get_Address()
             myAddress = address.toString();
         }
     }
+//    emit tester(myAddress);
 }
 
 void FunctionAcction::get_ListAddress_Server()
 {
     QString Laddress = myAddress.left(myAddress.lastIndexOf(".") + 1);
 
-    Laddress = "127.0.0."; // test
+    //Laddress = "127.0.0."; // test
 
     QTcpSocket *socket = new QTcpSocket();
-    for (int i = 0; i < 3; i++) {
+    for (int i = 10; i < 50; i++) {
 
         QString Address = Laddress + QString::number(i);
 
@@ -153,7 +154,7 @@ void FunctionAcction::get_ListAddress_Server()
 
 void FunctionAcction::check_status_app()
 {
-
+    get_Address();
     get_ListAddress_Server();
     //emit tester(QString::number(listServer.size()));  //tester
     if (!listServer.size()) {

@@ -35,13 +35,13 @@ public:
     QWidget *page_1;
     QPushButton *pushButton_start;
     QWidget *page_2;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QComboBox *comboBox_list_connect;
     QPushButton *pushButton_connect;
     QWidget *page;
     QPushButton *pushButton_back;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QGridLayout *gridLayout_3;
     QLabel *label;
     QGridLayout *gridLayout_2;
@@ -49,6 +49,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLineEdit *lineEdit_send_msg;
     QPushButton *pushButton_send_msg;
+    QLabel *label_my_id;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -72,18 +73,18 @@ public:
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
         page_2->setMaximumSize(QSize(16777215, 539));
-        widget = new QWidget(page_2);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(240, 190, 160, 26));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(page_2);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(240, 190, 160, 26));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        comboBox_list_connect = new QComboBox(widget);
+        comboBox_list_connect = new QComboBox(layoutWidget);
         comboBox_list_connect->setObjectName("comboBox_list_connect");
 
         horizontalLayout->addWidget(comboBox_list_connect);
 
-        pushButton_connect = new QPushButton(widget);
+        pushButton_connect = new QPushButton(layoutWidget);
         pushButton_connect->setObjectName("pushButton_connect");
 
         horizontalLayout->addWidget(pushButton_connect);
@@ -94,32 +95,32 @@ public:
         pushButton_back = new QPushButton(page);
         pushButton_back->setObjectName("pushButton_back");
         pushButton_back->setGeometry(QRect(0, 0, 80, 24));
-        widget1 = new QWidget(page);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(40, 30, 711, 501));
-        gridLayout_3 = new QGridLayout(widget1);
+        layoutWidget1 = new QWidget(page);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(40, 30, 711, 501));
+        gridLayout_3 = new QGridLayout(layoutWidget1);
         gridLayout_3->setObjectName("gridLayout_3");
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget1);
+        label = new QLabel(layoutWidget1);
         label->setObjectName("label");
 
         gridLayout_3->addWidget(label, 0, 0, 1, 1);
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName("gridLayout_2");
-        textEdit_show_msg = new QTextEdit(widget1);
+        textEdit_show_msg = new QTextEdit(layoutWidget1);
         textEdit_show_msg->setObjectName("textEdit_show_msg");
 
         gridLayout_2->addWidget(textEdit_show_msg, 0, 0, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        lineEdit_send_msg = new QLineEdit(widget1);
+        lineEdit_send_msg = new QLineEdit(layoutWidget1);
         lineEdit_send_msg->setObjectName("lineEdit_send_msg");
 
         horizontalLayout_2->addWidget(lineEdit_send_msg);
 
-        pushButton_send_msg = new QPushButton(widget1);
+        pushButton_send_msg = new QPushButton(layoutWidget1);
         pushButton_send_msg->setObjectName("pushButton_send_msg");
 
         horizontalLayout_2->addWidget(pushButton_send_msg);
@@ -132,7 +133,14 @@ public:
 
         stackedWidget_appChat->addWidget(page);
 
-        gridLayout->addWidget(stackedWidget_appChat, 0, 0, 1, 1);
+        gridLayout->addWidget(stackedWidget_appChat, 1, 0, 1, 1);
+
+        label_my_id = new QLabel(centralwidget);
+        label_my_id->setObjectName("label_my_id");
+        label_my_id->setLayoutDirection(Qt::LeftToRight);
+        label_my_id->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_my_id, 0, 0, 1, 1);
 
         Appchat->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Appchat);
@@ -159,6 +167,7 @@ public:
         pushButton_back->setText(QCoreApplication::translate("Appchat", "back", nullptr));
         label->setText(QCoreApplication::translate("Appchat", "Enemy", nullptr));
         pushButton_send_msg->setText(QCoreApplication::translate("Appchat", "Send", nullptr));
+        label_my_id->setText(QCoreApplication::translate("Appchat", "my id", nullptr));
     } // retranslateUi
 
 };

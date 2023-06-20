@@ -29,9 +29,9 @@ Appchat::~Appchat()
 void Appchat::on_pushButton_start_clicked()
 {
 
-
-    ui->stackedWidget_appChat->setCurrentIndex(1);
     emit start_app();
+    ui->stackedWidget_appChat->setCurrentIndex(1);
+    ui->label_my_id->setText(Acction->myAddress);
 
 }
 
